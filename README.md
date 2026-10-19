@@ -8,6 +8,9 @@
 
 零依赖、纯函数、Node 12+ 可跑。对外签名与 [iztro](https://github.com/SylarLong/iztro) 兼容，可原地替换。
 
+> **出处**：由 [AI紫府 AIZIFU](https://aizifu.org) 出品 —— 紫微斗数结构解读站点（简体 / 繁體 / English / 日本語 / 한국어 / Français）。
+> 本包是该站点**排盘引擎的开源内核**，与其生产实现同源；下面「验证结果」里的 **700 例对撞**就是它上线前的准入门槛。
+
 ```js
 const { bySolar } = require('ziwei-core/engine');
 
@@ -113,6 +116,7 @@ const chart = core.byLunar({
 | 全空间对撞（1924–1987 × 12 月 × 30 日 × 12 时辰 × 男女，含闰月） | **280,656 盘** | 不一致 0 |
 | 外部真值：命盘图 OCR（五行局 / 命主 / 身主） | 615 / 681 / 681 | **100%** |
 | 本仓库单元测试（20 例端到端 + 6 项安星断言） | 27 项 | 全绿 |
+| 生产链路同源 | — | 站点排盘引擎自 2026-10-19 起全量启用本实现，实质差异 0（唯一残留是杂曜 `type` 标签措辞，前端不消费） |
 
 身主那 8 例初判不符，逐条核过全是 OCR 错字（「天粱」→天梁 ×5、「火皇」→火星 ×3），非排盘差异。
 
@@ -130,11 +134,11 @@ const chart = core.byLunar({
 
 ## 协议
 
-MIT © AI紫府（ziweiai.cn）
+MIT © AI紫府 AIZIFU（aizifu.org）
 
 安星规则源自传统紫微斗数典籍（公开知识），代码为本项目独立实现。欢迎 fork、改、商用，保留版权声明即可。
 
 ## 相关
 
 - [ziwei-time](https://github.com/ziweiai/ziwei-time) —— 真太阳时与时辰换算（IANA 时区 / 夏令时 / 均时差 / 晚子时）
-- 在线使用：<https://ziweiai.cn>
+- 在线使用：<https://aizifu.org>

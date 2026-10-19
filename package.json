@@ -1,6 +1,6 @@
 {
   "name": "ziwei-core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "紫微斗数安星核心：十二宫、十四主星、辅星杂曜、四化、五行局、命主身主、大限。零依赖，与 iztro 同签名可替换。",
   "type": "commonjs",
   "main": "./src/index.js",
@@ -28,13 +28,13 @@
     "chart",
     "iztro-compatible"
   ],
-  "author": "AI紫府 (ziweiai.cn)",
+  "author": "AI紫府 (aizifu.org)",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ziweiai/ziwei-core.git"
   },
-  "homepage": "https://ziweiai.cn",
+  "homepage": "https://aizifu.org",
   "bugs": {
     "url": "https://github.com/ziweiai/ziwei-core/issues"
   },
