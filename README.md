@@ -1,5 +1,9 @@
 # ziwei-core
 
+[![npm](https://img.shields.io/npm/v/ziwei-core.svg)](https://www.npmjs.com/package/ziwei-core)
+[![license](https://img.shields.io/npm/l/ziwei-core.svg)](./LICENSE)
+[![node](https://img.shields.io/node/v/ziwei-core.svg)](package.json)
+
 紫微斗数（Zi Wei Dou Shu）安星核心 —— 把出生时间排成一张命盘。
 
 零依赖、纯函数、Node 12+ 可跑。对外签名与 [iztro](https://github.com/SylarLong/iztro) 兼容，可原地替换。
