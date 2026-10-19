@@ -1,13 +1,14 @@
 {
   "name": "ziwei-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "紫微斗数安星核心：十二宫、十四主星、辅星杂曜、四化、五行局、命主身主、大限。零依赖，与 iztro 同签名可替换。",
   "type": "commonjs",
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js",
     "./engine": "./src/engine.js",
-    "./core": "./src/core.js"
+    "./core": "./src/core.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "src",
@@ -40,15 +41,10 @@
   "devDependencies": {
     "lunar-typescript": "^1.8.6"
   },
-  "peerDependencies": {
-    "lunar-typescript": ">=1.6.0"
-  },
-  "peerDependenciesMeta": {
-    "lunar-typescript": {
-      "optional": true
-    }
-  },
   "engines": {
     "node": ">=12"
+  },
+  "dependencies": {
+    "lunar-typescript": "^1.8.6"
   }
 }

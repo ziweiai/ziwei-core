@@ -23,6 +23,16 @@ try {
 } catch (e) {
   /* 未安装 lunar-typescript 时仍可 require 本模块，仅 bySolar/byLunar 不可用 */
 }
+function assertDateLayer() {
+  if (!Solar || !Lunar) {
+    throw new Error(
+      'ziwei-core/engine 需要日期层 lunar-typescript（公历↔农历换算）。\n' +
+      '请执行：npm i lunar-typescript\n' +
+      '若已安装仍报错，可设 LUNAR_PATH 指向自建万年历模块（需导出 { Solar, Lunar }）。\n' +
+      '只做安星（不涉及公历日期）请改用零依赖的 require("ziwei-core")。'
+    );
+  }
+}
 
 const ZHI_STD = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
 const SHICHEN = ['子时', '丑时', '寅时', '卯时', '辰时', '巳时', '午时', '未时', '申时', '酉时', '戌时', '亥时'];
@@ -63,6 +73,7 @@ function toArgs(e, ti, gender, extra) {
  *   opts:         { fixLeap?: bool(忽略，已内置), brightScheme?: 'wzt' }
  */
 function bySolar(solarStr, timeIndex, gender, opts) {
+  assertDateLayer();
   let s = String(solarStr);
   let ti = (timeIndex === undefined || timeIndex === null) ? 0 : Number(timeIndex);
   const o = (opts && typeof opts === 'object') ? opts : {};
@@ -88,6 +99,7 @@ function bySolar(solarStr, timeIndex, gender, opts) {
  *   lunarDateStr: '1990-5-23'（农历年-月-日）
  */
 function byLunar(lunarStr, timeIndex, gender, isLeap, opts) {
+  assertDateLayer();
   const p = String(lunarStr).split('-').map(Number);
   const ti = (timeIndex === undefined || timeIndex === null) ? 0 : Number(timeIndex);
   const l = Lunar.fromYmdHms(p[0], (isLeap ? -Math.abs(p[1]) : p[1]), p[2], TI_HOUR[ti % 12], 0, 0);

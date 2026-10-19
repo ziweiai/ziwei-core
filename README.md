@@ -25,10 +25,12 @@ console.log(chart.palaces[0].majorStars); // 主星 + 亮度 + 四化
 ## 安装
 
 ```bash
-npm i ziwei-core lunar-typescript
+npm i ziwei-core
 ```
 
-`lunar-typescript` 只在用 `ziwei-core/engine`（公历入口）时需要；只用 `ziwei-core`（农历入口）时可以不装，本包**零依赖**。
+安星层（`require('ziwei-core')`）**零依赖**，纯函数、Node 12+ 可跑。
+
+`require('ziwei-core/engine')` 需要日期层 `lunar-typescript`（公历↔农历换算）。它已作为**正式依赖随包自动安装**，无需手动装；只有想用自建万年历替换时才需要设 `LUNAR_PATH` 指向你自己的模块（需导出 `{ Solar, Lunar }`）。
 
 ## 用法
 
