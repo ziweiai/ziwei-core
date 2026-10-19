@@ -37,6 +37,9 @@
   "bugs": {
     "url": "https://github.com/ziweiai/ziwei-core/issues"
   },
+  "devDependencies": {
+    "lunar-typescript": "^1.8.6"
+  },
   "peerDependencies": {
     "lunar-typescript": ">=1.6.0"
   },
