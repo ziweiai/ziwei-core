@@ -1,6 +1,6 @@
 {
   "name": "ziwei-core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "紫微斗数安星核心：十二宫、十四主星、辅星杂曜、四化、五行局、命主身主、大限。零依赖，与 iztro 同签名可替换。",
   "type": "commonjs",
   "main": "./src/index.js",
